@@ -208,13 +208,11 @@ ul.navbar-nav {
 	.top-content .text { padding-top: 0; padding-bottom: 60px; }
 	.top-content .top-big-link { margin-top: 25px; }
 	.top-content .top-big-link a.btn { margin-top: 10px; }
-
 }
 
 @media (max-width: 415px) {
 	
 	h1, h2 { font-size: 32px; }
-
 }
 
 
@@ -259,7 +257,7 @@ only screen and (                min-resolution: 2dppx) {
 #pswd_info::before {
     content: "\25B6";
     position:absolute;
-    top:50px;
+    top:40px;
     left:99.8%;
     size:14px;
     line-height:14px;
