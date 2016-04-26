@@ -39,26 +39,21 @@
             <div class="inner-bg">
                 <div class="container">
                     <div class="row">						
-                        <div class="col-sm-7 text">
-                            <h1><!-- Registration Form --></h1>
-                            <div class="description">
-                            	<span>
-	                            <!--	Description -->
-                            	</span>
-                            </div>
+                        <div class="col-sm-7 form-box">
 							<div class="firstinfobox" id="first_info">
 								<span style="font-weight: 400;"> Passwort Information:</span>
 								<hr noshade size="1" style= "margin-top:0.1em; margin-bottom:2em;">
-								<span id="firstinfoboxText"><b>82%</b> unserer Anwender haben ein sicherers Passwort gewählen.</span>
+								<span id="firstinfoboxText"><b>82%</b> unserer Anwender haben ein sicherers Passwort gewählt.</span>
 								<p></p>
 								<span>Werden Sie auch ein sicheres Passwort wählen?</span>
 								<p></p>
 								<button id="closeBtn" class="btn pull-right" style= "margin-top:0.1em;">Schließen</button>
 							</div> 	
+							
 							<div class="infobox" id="pswd_info">
 								<span style="font-weight: 400;" id="PI" > Passwort Information:</span>
 								<hr noshade size="1" style= "margin-top:0.1em; margin-bottom:0.5em;">
-								<span id="InfoPI">Haben Sie ein sicheres Passwort und gehören Sie zu den 82%?</span>
+								<span id="InfoPI">Haben Sie auch ein sicheres Passwort wie 82% unserer Anwender?</span>
 								<table> 
 									<colgroup> 
 										<col width="300"> 
@@ -76,16 +71,10 @@
                         	<div class="form-top">
                         		<div class="form-top-left">
                         			<h3>Account</h3>
-									<table> 
-										<colgroup> 
-											<col width="270"> 
-										</colgroup>
-										<tr> 
-											<td><p>Das folgende Formular bitte ausfüllen</p></td> 									
-											<td><a href="#" onclick="document.getElementById('first_info').style.display = 'block'; document.getElementById('layer').style.display = 'block';" >
-											<img src="assets/img/info.png" alt="Info" width="15" height="15" style= "margin-top:-0.7em;"></a></td> 
-										</tr> 
-									</table>
+									<span>Das folgende Formular bitte ausfüllen</span>									
+									<a href="#" onclick="document.getElementById('first_info').style.display = 'block'; document.getElementById('layer').style.display = 'block';" >
+									<img src="assets/img/info.png" alt="Info" width="15" height="15" style= "margin-top:-0.7em;"></a>
+									
                         		</div>
                             </div>
                             <div class="form-bottom" id="formular">
