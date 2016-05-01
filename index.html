@@ -1,21 +1,4 @@
 <!DOCTYPE html>
-<?php
-	error_reporting(0);
-	include_once 'assets/db/db_info.php';
-	$c = mysqli_connect($host, $user, $password, $db);
-
-	if(isset($_POST['submitPW'])){
-		$vorname = $_POST['form-first-name'];
-		$nachname = $_POST['form-last-name'];
-		$email = $_POST['form-email'];
-		$passwort = $_POST['form-new-password'];
-	
-		//Daten in die Datenbank hinzufuegen
-		$query = "INSERT INTO formulardaten(Vorname, Nachname, Email, Passwort) VALUES ('$vorname', '$nachname', '$email', '$passwort')";
-		mysqli_query($c, $query);
-	}
-	mysqli_close($c);
-?>
 
 <html lang="en">
     <head>
@@ -78,7 +61,7 @@
                         		</div>
                             </div>
                             <div class="form-bottom" id="formular">
-			                    <form action="index.php" method="post" class="registration-form">
+			                    <form action="form.php" method="post" class="registration-form">
 			                    	<div class ="row">
 										<div class="form-group col-xs-6">
 											<label class="sr-only" for="form-first-name">First name</label>
