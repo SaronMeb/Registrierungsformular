@@ -1,7 +1,7 @@
 <?php
 	//Verbindungsdaten
-	$host = "127.0.0.1";
-	$user = "root";
-	$password = "";
-	$db = "umfragedata";
+	$host = "db2.cip.ifi.lmu.de";
+	$user = "mebrahtu";
+	$password = "AmEsadS1";
+	$db = "mebrahtu_Daten_StudieMA";
 ?>
