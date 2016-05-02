@@ -125,21 +125,13 @@ jQuery(document).ready(function() {
     		}else if ( $('#form-new-password').val() != $('#form-confirm-password').val()){
 			    e.preventDefault();
     			$('#form-confirm-password').addClass('input-error');
-			}
-    	});   
-		
-    	$(this).find('input[type="text"], textarea').each(function(){
-    		if( $(this).val() == "" ) {
-    			e.preventDefault();
-    			$(this).addClass('input-error');
-    		}else {
+			}else {
     			$(this).removeClass('input-error');
-				
 				//hier gehts weiter ;
-				alert("Bitte geben Sie in das folgende Formular diesen vierstelligen Code ein: " + num);
+				alert("Bitte geben Sie in den folgende Fragebogen diesen vierstelligen Code ein: " + num);
+				return false;
     		}
-    	});
-    	
+    	});      	
     });
 	
  	//Close Button
@@ -154,6 +146,7 @@ jQuery(document).ready(function() {
 		firstClick = false;
  		$('#first_info').show();
 		$('#layer').show();
+		$('#closeBtn').focus();
     });
 });
 
