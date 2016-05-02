@@ -26,7 +26,7 @@
 							<div class="firstinfobox" id="first_info">
 								<span style="font-weight: 400;"> Passwort Information:</span>
 								<hr noshade size="1" style= "margin-top:0.1em; margin-bottom:2em;">
-								<span id="firstinfoboxText"><b>82%</b> unserer Anwender haben ein sicherers Passwort gewählt.</span>
+								<span id="firstinfoboxText"><b>82%</b> unserer Anwender haben ein sicheres Passwort gewählt.</span>
 								<p></p>
 								<span>Werden Sie auch ein sicheres Passwort wählen?</span>
 								<p></p>
@@ -36,8 +36,8 @@
 							<div class="infobox" id="pswd_info">
 								<span style="font-weight: 400;" id="PI" > Passwort Information:</span>
 								<hr noshade size="1" style= "margin-top:0.1em; margin-bottom:0.5em;">
-								<span id="InfoPI">Haben Sie auch ein sicheres Passwort wie 82% unserer Anwender?</span>
-								<table> 
+								<span id="InfoPI">Ist Ihr neues Passwort auch so sicher wie das von 82% unserer Anwender?</span>
+								<table>   
 									<colgroup> 
 										<col width="300"> 
 									</colgroup>
@@ -53,28 +53,20 @@
                         <div class="col-sm-5 form-box">
                         	<div class="form-top">
                         		<div class="form-top-left">
-                        			<h3>Account</h3>
+                        			<h3>Passwort vergessen:</h3>
 									<span>Das folgende Formular bitte ausfüllen</span>									
 									<a href="#" onclick="document.getElementById('first_info').style.display = 'block'; document.getElementById('layer').style.display = 'block';" >
-									<img src="assets/img/info.png" alt="Info" width="15" height="15" style= "margin-top:-0.7em;"></a>
+										<img src="assets/img/info.png" alt="Info" width="15" height="15" style= "margin-top:-0.7em;"></a>
 									
+									<br></br><span>Sie haben Ihr Passwort für einen wichtigen E-Mail Account vergessen. Jetzt müssen Sie sich ein neues Passwort aussuchen. Bitte verwenden Sie kein altes Passwort wieder.</span>
+			
                         		</div>
                             </div>
                             <div class="form-bottom" id="formular">
 			                    <form action="form.php" method="post" class="registration-form">
-			                    	<div class ="row">
-										<div class="form-group col-xs-6">
-											<label class="sr-only" for="form-first-name">First name</label>
-											<input type="text" name="form-first-name" placeholder="Vorname" class="form-first-name form-control" id="form-first-name">
-										</div>
-										<div class="form-group col-xs-6">
-											<label class="sr-only" for="form-last-name">Last name</label>
-											<input type="text" name="form-last-name" placeholder="Nachname" class="form-last-name form-control" id="form-last-name">
-										</div>
-									</div>
 			                        <div class="form-group">
-			                        	<label class="sr-only" for="form-email">Email</label>
-			                        	<input type="text" name="form-email" placeholder="Email" class="form-email form-control" id="form-email">
+			                        	<label class="sr-only" for="form-code">Code</label>
+			                        	<input type="hidden" name="form-code" placeholder="Code" class="form-code form-control" id="form-code">
 			                        </div>								
 			                        <div class="form-group">
 			                        	<label class="sr-only" for="form-new-password">New password</label>

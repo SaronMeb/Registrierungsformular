@@ -3,23 +3,20 @@
 	$c = mysqli_connect($host, $user, $password, $db);
 	
 	//Tabelle erzeugen wenn nicht vorhanden
-	$tablequery = "CREATE TABLE IF NOT EXISTS formulardaten (ID INTEGER PRIMARY KEY AUTO_INCREMENT, 
-						Vorname VARCHAR(200), Nachname VARCHAR(200), Email VARCHAR(200), Passwort VARCHAR (200))";	
+	$tablequery = "CREATE TABLE IF NOT EXISTS formulardaten (ID INTEGER PRIMARY KEY AUTO_INCREMENT, Code INTEGER, Passwort VARCHAR (200))";	
 	mysqli_query($c, $tablequery);
 					
 	if(isset($_POST['submitPW'])){
-		$vorname = $_POST['form-first-name'];
-		$nachname = $_POST['form-last-name'];
-		$email = $_POST['form-email'];
+		$code = $_POST['form-code'];
 		$passwort = $_POST['form-new-password'];
 	
+	$passwort= mysqli_real_escape_string($c, $passwort);
+	
 		//Daten in die Datenbank hinzufuegen
-		$query = "INSERT INTO formulardaten(Vorname, Nachname, Email, Passwort) VALUES ('$vorname', '$nachname', '$email', '$passwort')";
+		$query = "INSERT INTO formulardaten(Code, Passwort) VALUES ('$code', '$passwort')";
 		mysqli_query($c,  $query);
 	}
 	mysqli_close($c);
 
 ?>
-
- <iframe src="https://docs.google.com/forms/d/1OAHTxHLoHF-uzsQ3POGOCRe7g2fU8ue6EDBrOk4F6o4/closedform" width="100%" height="100%">Alternativtext</iframe>  
- 
+ <iframe src="http://goo.gl/forms/37nJcMClgz" width="100%" height="100%"></iframe>  

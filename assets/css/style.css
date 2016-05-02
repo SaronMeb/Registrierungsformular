@@ -186,7 +186,7 @@ ul.navbar-nav {
 }
 
 .form-bottom form .input-error {
-	border-color: #19b9e7;
+	border-color: #e74719;
 }
 
 
@@ -233,7 +233,7 @@ only screen and (                min-resolution: 2dppx) {
 /* Info Box*/
 #pswd_info {
     position:absolute;
-    top:240px;		
+    top:235px;		
     bottom: -115px\9; /* IE Specific */
     right:-30px;
     width:350px;
@@ -257,7 +257,7 @@ only screen and (                min-resolution: 2dppx) {
 #pswd_info::before {
     content: "\25B6";
     position:absolute;
-    top:40px;
+    top:110px;
     left:99.8%;
     size:14px;
     line-height:14px;

@@ -1,5 +1,10 @@
 jQuery(document).ready(function() {
-
+	
+	//4 stelliger Code 
+	var num = Math.floor(Math.random() * 9000) + 1000;
+	$('#form-code').val(num);
+	
+	var firstClick = true;
 	
     /*
         Fullscreen background
@@ -57,7 +62,6 @@ jQuery(document).ready(function() {
 			once = true;			
 			document.getElementById('passwdRatingPic').src = "assets/img/peopleblack.png";
 		} else if ( result.score == 1) {
-			console.log(once);	
 			$('#pwInfo').text("Passwort Hilfe:");
 			$('#pwInfoHilfe').html(str);
 			once = true;			
@@ -75,7 +79,6 @@ jQuery(document).ready(function() {
 		} else if ( result.score == 4) {
 			$('#pwInfo').text("Glückwunsch Sie haben es geschafft!");
 			$('#pwInfoHilfe').text(" ");
-			console.log(once);
 			if(once){
 				document.getElementById('passwdRatingPic').src = "assets/img/peopleblackGeschafft1.png";		
 				setTimeout(function (){
@@ -89,27 +92,29 @@ jQuery(document).ready(function() {
 		});
 	//show PW Info Box on click on input field new PW and dont show when click somewhere else (but still show on click on PW Info Box)
 	$(document).on('focus', 'input', function (e) {
-		if(e.target.id == "pswd_info" ){
-			$('#pswd_info').show();
-		}else if (e.target.id == "passwdRatingPic"){
-			$('#pswd_info').show();
-		}else if (e.target.id == "pwInfo"){
-			$('#pswd_info').show();
-		}else if (e.target.id == "pwInfoHilfe"){
-			$('#pswd_info').show();
-		}else if (e.target.id == "PI"){
-			$('#pswd_info').show();
-		}else if (e.target.id == "InfoPI"){
-			$('#pswd_info').show();
-		}else if (e.target.id == "PITable"){
-			$('#pswd_info').show();
-		}else if (e.target.id == "td1"){
-			$('#pswd_info').show();
-		}else if (e.target.id == "td2"){
-			$('#pswd_info').show();
-		}else if (e.target.id == "form-new-password"){
-			$('#pswd_info').show();
-		}else $('#pswd_info').hide();
+		if(!firstClick){
+			if(e.target.id == "pswd_info" ){
+				$('#pswd_info').show();
+			}else if (e.target.id == "passwdRatingPic"){
+				$('#pswd_info').show();
+			}else if (e.target.id == "pwInfo"){
+				$('#pswd_info').show();
+			}else if (e.target.id == "pwInfoHilfe"){
+				$('#pswd_info').show();
+			}else if (e.target.id == "PI"){
+				$('#pswd_info').show();
+			}else if (e.target.id == "InfoPI"){
+				$('#pswd_info').show();
+			}else if (e.target.id == "PITable"){
+				$('#pswd_info').show();
+			}else if (e.target.id == "td1"){
+				$('#pswd_info').show();
+			}else if (e.target.id == "td2"){
+				$('#pswd_info').show();
+			}else if (e.target.id == "form-new-password"){
+				$('#pswd_info').show();
+			}else $('#pswd_info').hide();
+		}	
 	});
 	
     $('.registration-form').on('submit', function(e) {
@@ -130,7 +135,8 @@ jQuery(document).ready(function() {
     		}else {
     			$(this).removeClass('input-error');
 				
-				//hier gehts weiter
+				//hier gehts weiter ;
+				alert("Bitte geben Sie in das folgende Formular diesen vierstelligen Code ein: " + num);
     		}
     	});
     	
@@ -140,11 +146,12 @@ jQuery(document).ready(function() {
 	$('#closeBtn').click(function() {
 		$('#first_info').hide();
 		$('#layer').hide();
-		$('#form-first-name').focus();
+		$('#form-new-password').focus();
 	});	
 
 	//Click Form -> Info Box opens (Just one time)
-	$('#form-first-name').one('focus', function() {
+	$('#form-new-password').one('focus', function() {
+		firstClick = false;
  		$('#first_info').show();
 		$('#layer').show();
     });
