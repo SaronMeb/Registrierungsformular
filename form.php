@@ -18,8 +18,8 @@
 	}
 	mysqli_close($c);
 	
-	echo 'Code: ';
-	echo $code ;
+	echo "<h1>Code: $code </h1>";
+
 ?>
 
 <iframe src="http://goo.gl/forms/37nJcMClgz" width="100%" height="100%"></iframe>  
