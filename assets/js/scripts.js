@@ -28,10 +28,11 @@ jQuery(document).ready(function() {
     $('.registration-form input[type="password"], .registration-form textarea').on('focus', function() {
     	$(this).removeClass('input-error');
     });
- 		var once = false;
+ 	var once = false;
+	var pswd = "";
 	$('#form-new-password').keyup(function() {
 		//set password variable
-		var pswd = $(this).val();
+		pswd = $(this).val();
 		var result = zxcvbn(pswd);
 		var str ="";
 		var tmp ="";
@@ -119,7 +120,7 @@ jQuery(document).ready(function() {
 	
     $('.registration-form').on('submit', function(e) {
     	$(this).find('input[type="password"], textarea').each(function(){
-    		if( $(this).val() == "" ) {
+    		if( $(this).val() == "" || pswd.length < 8) {
     			e.preventDefault();
     			$(this).addClass('input-error');
     		}else if ( $('#form-new-password').val() != $('#form-confirm-password').val()){
@@ -128,8 +129,8 @@ jQuery(document).ready(function() {
 			}else {
     			$(this).removeClass('input-error');
 				//hier gehts weiter ;
-				alert("Bitte geben Sie in den folgende Fragebogen diesen vierstelligen Code ein: " + num);
-				return false;
+				//alert("Bitte geben Sie in den folgende Fragebogen diesen vierstelligen Code ein: " + num);
+				//return false;
     		}
     	});      	
     });

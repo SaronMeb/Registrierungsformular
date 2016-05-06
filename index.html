@@ -26,7 +26,7 @@
 							<div class="firstinfobox" id="first_info">
 								<span style="font-weight: 400;"> Passwort Information:</span>
 								<hr noshade size="1" style= "margin-top:0.1em; margin-bottom:2em;">
-								<span id="firstinfoboxText"><b>82%</b> unserer Anwender haben ein sicheres Passwort gewählt.</span>
+								<span id="firstinfoboxText"><b>82%</b> der Anwender hatten nach dem Zurücksetzen ein sicheres Passwort.</span>
 								<p></p>
 								<span>Werden Sie auch ein sicheres Passwort wählen?</span>
 								<p></p>
@@ -53,16 +53,17 @@
                         <div class="col-sm-5 form-box">
                         	<div class="form-top">
                         		<div class="form-top-left">
-                        			<h3>Passwort vergessen:</h3>
-									<span>Das folgende Formular bitte ausfüllen</span>									
+                        			<h3><b>Passwort zurücksetzen</b></h3>
+									<span><b>Versetzen Sie sich bitte in folgende Situation:</b></span>									
 									<a href="#" onclick="document.getElementById('first_info').style.display = 'block'; document.getElementById('layer').style.display = 'block';" >
-										<img src="assets/img/info.png" alt="Info" width="15" height="15" style= "margin-top:-0.7em;"></a>
+										<img src="assets/img/info.png" alt="Info" width="15" height="15" style= "margin-top:-0.7em;"></a></br>
 									
-									<br></br><span>Sie haben Ihr Passwort für einen wichtigen E-Mail Account vergessen. Jetzt müssen Sie sich ein neues Passwort aussuchen. Bitte verwenden Sie kein altes Passwort wieder.</span>              	
+									<span>Jemand hat sich unberechtigt Zugang zu Ihrem Email-Konto verschafft. Nun wurden Sie aufgefordert ein neues Passwort zu wählen, um wieder die Kontrolle über Ihr Email-Konto zu bekommen. </span>              	
 							</div>
                             </div>
                             <div class="form-bottom" id="formular">
 			                    <form action="form.php" method="post" class="registration-form">
+									<span>Wählen Sie bitte ein neues Passwort. Sie dürfen Buchstaben, Zahlen und Sonderzeichen verwenden.</br>Verwenden Sie mindestens 8 Zeichen.</span>
 			                        <div class="form-group">
 			                        	<label class="sr-only" for="form-code">Code</label>
 			                        	<input type="hidden" name="form-code" placeholder="Code" class="form-code form-control" id="form-code">

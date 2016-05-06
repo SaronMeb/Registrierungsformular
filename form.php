@@ -17,6 +17,9 @@
 		mysqli_query($c,  $query);
 	}
 	mysqli_close($c);
-
+	
+	echo 'Code: ';
+	echo $code ;
 ?>
- <iframe src="http://goo.gl/forms/37nJcMClgz" width="100%" height="100%"></iframe>  
+
+<iframe src="http://goo.gl/forms/37nJcMClgz" width="100%" height="100%"></iframe>  
