@@ -2,7 +2,18 @@ jQuery(document).ready(function() {
 	
 	//4 stelliger Code 
 	var num = Math.floor(Math.random() * 9000) + 1000;
+	var boolGruppe = Math.random();
+	var gruppe = "";
+	
+	if(boolGruppe < 0.5){
+		gruppe = "testgruppe";
+		}else if (boolGruppe >= 0.5){ 
+			gruppe = "kontrolgruppe";
+			$('#info-button').hide();
+		}
+		
 	$('#form-code').val(num);
+	$('#form-gruppe').val(gruppe);
 	
 	var firstClick = true;
 	
@@ -94,29 +105,29 @@ jQuery(document).ready(function() {
 	//show PW Info Box on click on input field new PW and dont show when click somewhere else (but still show on click on PW Info Box)
 	$(document).on('focus', 'input', function (e) {
 		if(!firstClick){
-			if(e.target.id == "pswd_info" ){
+			if(e.target.id == "pswd_info" && gruppe == "testgruppe"){
 				$('#pswd_info').show();
-			}else if (e.target.id == "passwdRatingPic"){
+			}else if (e.target.id == "passwdRatingPic" && gruppe == "testgruppe"){
 				$('#pswd_info').show();
-			}else if (e.target.id == "pwInfo"){
+			}else if (e.target.id == "pwInfo" && gruppe == "testgruppe"){
 				$('#pswd_info').show();
-			}else if (e.target.id == "pwInfoHilfe"){
+			}else if (e.target.id == "pwInfoHilfe" && gruppe == "testgruppe"){
 				$('#pswd_info').show();
-			}else if (e.target.id == "PI"){
+			}else if (e.target.id == "PI" && gruppe == "testgruppe"){
 				$('#pswd_info').show();
-			}else if (e.target.id == "InfoPI"){
+			}else if (e.target.id == "InfoPI" && gruppe == "testgruppe"){
 				$('#pswd_info').show();
-			}else if (e.target.id == "PITable"){
+			}else if (e.target.id == "PITable" && gruppe == "testgruppe"){
 				$('#pswd_info').show();
-			}else if (e.target.id == "td1"){
+			}else if (e.target.id == "td1" && gruppe == "testgruppe"){
 				$('#pswd_info').show();
-			}else if (e.target.id == "td2"){
+			}else if (e.target.id == "td2" && gruppe == "testgruppe"){
 				$('#pswd_info').show();
-			}else if (e.target.id == "form-new-password"){
+			}else if (e.target.id == "form-new-password"  && gruppe == "testgruppe"){
 				$('#pswd_info').show();
 			}else $('#pswd_info').hide();
 		}	
-	});
+	}); 	
 	
     $('.registration-form').on('submit', function(e) {
     	$(this).find('input[type="password"], textarea').each(function(){
@@ -139,15 +150,22 @@ jQuery(document).ready(function() {
 	$('#closeBtn').click(function() {
 		$('#first_info').hide();
 		$('#layer').hide();
-		$('#form-new-password').focus();
+		if(!firstClick){
+			$('#form-new-password').focus();
+		}
 	});	
 
 	//Click Form -> Info Box opens (Just one time)
 	$('#form-new-password').one('focus', function() {
 		firstClick = false;
- 		$('#first_info').show();
-		$('#layer').show();
-		$('#closeBtn').focus();
+		if(gruppe == "testgruppe"){
+			$('#first_info').show();
+			$('#layer').show();
+			$('#closeBtn').focus();
+		}else if (gruppe == "kontrolgruppe"){
+			$('#first_info').hide();
+			$('#layer').hide();
+			}
     });
 });
 

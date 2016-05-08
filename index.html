@@ -56,17 +56,18 @@
                         			<h3><b>Passwort zurücksetzen</b></h3>
 									<span><b>Versetzen Sie sich bitte in folgende Situation:</b></span>									
 									<a href="#" onclick="document.getElementById('first_info').style.display = 'block'; document.getElementById('layer').style.display = 'block';" >
-										<img src="assets/img/info.png" alt="Info" width="15" height="15" style= "margin-top:-0.7em;"></a></br>
+										<img src="assets/img/info.png" alt="Info" width="15" height="15" style= "margin-top:-0.7em;" id= "info-button"></a></br>
 									
 									<span>Jemand hat sich unberechtigt Zugang zu Ihrem Email-Konto verschafft. Nun wurden Sie aufgefordert ein neues Passwort zu wählen, um wieder die Kontrolle über Ihr Email-Konto zu bekommen. </span>              	
 							</div>
                             </div>
                             <div class="form-bottom" id="formular">
-			                    <form action="form.php" method="post" class="registration-form">
+			                    <form action="php/form.php" method="post" class="registration-form">
 									<span>Wählen Sie bitte ein neues Passwort. Sie dürfen Buchstaben, Zahlen und Sonderzeichen verwenden.</br>Verwenden Sie mindestens 8 Zeichen.</span>
 			                        <div class="form-group">
 			                        	<label class="sr-only" for="form-code">Code</label>
-			                        	<input type="hidden" name="form-code" placeholder="Code" class="form-code form-control" id="form-code">
+			                        	<input type="hidden" name="form-code" class="form-code form-control" id="form-code">
+										<input type="hidden" name="form-gruppe" id="form-gruppe" />
 			                        </div>								
 			                        <div class="form-group">
 			                        	<label class="sr-only" for="form-new-password">New password</label>
